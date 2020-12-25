@@ -7,7 +7,7 @@ const Messenger = (props) => {
         <div className={styles.content}>
             <div>
                 <Message/>
-2
+
             </div>
         </div>
     )

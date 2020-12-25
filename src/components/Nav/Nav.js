@@ -5,7 +5,13 @@ const Nav = (props) => {
     return (
         <div className={styles.nav}>
             <div>
-
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
         </div>
     )
