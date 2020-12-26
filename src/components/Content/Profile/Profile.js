@@ -3,6 +3,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import {connect} from "react-redux";
 
 const Profile = props => {
+
     return (
         <div>
             <div>
@@ -12,7 +13,7 @@ const Profile = props => {
                             Photo
                         </Col>
                         <Col sm={8}>
-                            <p>props.name</p>
+                            <p>{props.name}</p>
                         </Col>
                     </Row>
                 </Container>
