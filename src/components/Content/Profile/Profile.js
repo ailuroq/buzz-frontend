@@ -1,19 +1,26 @@
 import React from 'react'
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container, NavLink, Row} from "react-bootstrap";
 import {connect} from "react-redux";
+import avatar from './../../../static/avatar.png'
+import styles from './Profile.module.css'
 
 const Profile = props => {
-
     return (
         <div>
             <div>
                 <Container>
                     <Row>
                         <Col sm={4}>
-                            Photo
+                            <div className={styles.avatar}>
+                                <img src={avatar} alt=""/>
+                                <NavLink to="/settings">Change photo</NavLink>
+                            </div>
                         </Col>
                         <Col sm={8}>
-                            <p>{props.name}</p>
+                            <div>
+                                <p>Username</p>  {/*here should be props.username*/}
+                                <p>status</p>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

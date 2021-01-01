@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './Header.module.css'
-import {Container, Row, Col, Button} from 'react-bootstrap'
+import {Container, Row, Col, Button, Dropdown, ButtonGroup, DropdownButton, NavLink} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../../static/straw.png'
 import {ErrorMessage, Field, Form, Formik} from 'formik'
+import {SplitButton} from "react-bootstrap";
 
 const Header = (props) => {
     return (
@@ -11,11 +12,31 @@ const Header = (props) => {
             <Container>
                 <Row>
                     <Col sm={10}>
-                        <img className={styles.logotype} src={logo}/>
+                        <NavLink className={styles.logotype}>
+                            <img src={logo}/>
+                        </NavLink>
                     </Col>
                     <Col sm={2}>
                         <div className={styles.profile}>
-                            <a href="/profile">My profile</a>
+                            <div>
+                                {[SplitButton].map((DropdownType, idx) => (
+                                    <DropdownType
+                                        as={ButtonGroup}
+                                        key={idx}
+                                        id={`dropdown-button-drop-${idx}`}
+                                        size="sm"
+                                        variant="Info"
+                                        title="Username"  /*here should be props.username*/
+
+                                    >
+                                        <Dropdown.Item eventKey="1">Settings</Dropdown.Item>
+                                        <Dropdown.Item eventKey="2">Help</Dropdown.Item>
+                                        <Dropdown.Item eventKey="3">Logout</Dropdown.Item>
+
+                                        </DropdownType>
+                                ))}
+                            </div>
+
                         </div>
                     </Col>
                 </Row>

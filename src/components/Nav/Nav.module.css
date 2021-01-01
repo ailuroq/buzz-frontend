@@ -1,4 +1,24 @@
 .nav {
-    background-color: #e96262;
+    background-color: #ffe69a;
     grid-area: nav;
+    height: 100vh;
+    position: sticky;
+}
+
+.menu {
+    padding-left: 30%;
+}
+.menu li{
+    list-style-type: none;
+    margin-top: 15px;
+    font-size: 20px;
+    color: indigo;
+}
+
+.menu_item {
+    color:black;
+}
+
+.menu_item:hover{
+    color:black;
 }

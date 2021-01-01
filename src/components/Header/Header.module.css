@@ -1,13 +1,16 @@
 .header {
-    background-color: #b2f83c;
+    background-color: #ffd4a1;
     grid-area: header;
 }
-.logotype {
-    margin-top: 10px;
+.logotype img{
+    margin-top: 2px;
     width: 40px;
     height: auto;
 }
 .profile {
-    margin-top: 18px;
+    margin-top: 14px;
+}
 
+#dropdown-basic {
+    background-color: #fff;
 }
