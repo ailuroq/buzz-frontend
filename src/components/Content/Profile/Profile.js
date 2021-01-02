@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Col, Container, NavLink, Row} from "react-bootstrap";
 import {connect} from "react-redux";
 import avatar from './../../../static/avatar.png'
 import styles from './Profile.module.css'
+import {getUser} from "../../../redux/actions/getUser";
+import store from "../../../redux/store/store";
 
 const Profile = props => {
+    useEffect(()=>{
+        store.dispatch(getUser(props.id))
+        console.log('render')
+    })
+
     return (
         <div>
             <div>

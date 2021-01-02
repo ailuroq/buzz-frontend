@@ -14,7 +14,7 @@ const App = (props) => {
             <Header/>
             <Nav/>
             <Route exact path='/messenger' component={Messenger}/>
-            <Route exact path='/profile' component={Profile}/>
+            <Route exact path='/profile' component={Profile} />
             <Route exact path='/login' component={Login}/>
             <Route exact path='/registration' component={Registration}/>
         </div>
